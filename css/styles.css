@@ -1,4 +1,109 @@
 /* General Reset */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+    color: #333;
+} */
+
+/* Sidebar Styles */
+/* .sidebar {
+    width: 200px;
+    background-color: #0044cc;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+} */
+
+/* .sidebar h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+} */
+
+/* .sidebar nav a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+} */
+
+/* .sidebar nav a:hover {
+    background-color: #003399;
+} */
+
+/* Main Content */
+/* .content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+} */
+
+/* Cards for Metrics */
+/* .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+} */
+
+.cards-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+/* Graph Placeholder */
+/* .graph {
+    height: 300px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #555;
+    margin-top: 20px;
+} */
+
+/* Table Styles */
+/* table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+} */
+
+/* th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+} */
+
+/* th {
+    background-color: #f0f0f0;
+} */
+
+/********************************************
+=============================================
+
+                 Dashboard
+
+============================================
+********************************************/
+
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -8,60 +113,174 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    height: 100vh;
     background-color: #f5f5f5;
+    color: #333;
 }
 
 /* Sidebar Styles */
-.sidebar {
+/* .sidebar {
     width: 200px;
     background-color: #0044cc;
     color: white;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
     height: 100vh;
-}
+} */
 
-.sidebar h2 {
+/* .sidebar h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-}
+} */
 
-.sidebar nav a {
-    display: block;
+/* .sidebar nav a {
     color: white;
     text-decoration: none;
-    margin: 10px 0;
+    margin-bottom: 10px;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+} */
+
+/* .sidebar nav a:hover {
+    background-color: #003399;
+} */
+
+
+/* Login page */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.sidebar nav a:hover {
-    text-decoration: underline;
+body.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eff5fabe;
+}
+.login-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: #e0e0e0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2.login-heading{
+    font-size: 2em;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 310 px;
+    margin: 30px 0;
+    border-bottom: 2px solid #ffffff;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #fff;
+}
+
+
+.input-box .icon{
+    position: relative;
+    right: 8px;
+    color: #fff;
+    line-height: 57px;
 }
 
 /* Main Content */
 .content {
     flex: 1;
     padding: 20px;
+    overflow-y: auto;
 }
 
-h1 {
-    margin-bottom: 1rem;
+header {
+    margin-bottom: 20px;
 }
 
-/* Cards and Metrics */
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Metrics Section */
 .metrics {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .card {
     background-color: white;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     flex: 1;
     text-align: center;
+    min-width: 200px;
 }
 
-/* Table Styles */
+/* Graph Section */
+.graph-section {
+    margin-bottom: 20px;
+}
+
+.graph {
+    height: 300px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Activity Section */
+.activity ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.activity li {
+    margin-bottom: 10px;
+}
+
+/* Campaigns Section */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -70,8 +289,8 @@ table {
 
 th,
 td {
-    border: 1px solid #ddd;
     padding: 10px;
+    border: 1px solid #ddd;
     text-align: left;
 }
 
@@ -79,15 +298,59 @@ th {
     background-color: #f0f0f0;
 }
 
-.create-btn {
-    background-color: #0044cc;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+/* Calendar Section */
+.calendar-section {
+    margin-top: 20px;
 }
 
-.create-btn:hover {
-    background-color: #003399;
+.calendar-section h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.calendar-section p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.calendar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.day {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 20px);
+    /* Three items per row */
+    min-width: 200px;
+}
+
+.day h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #0044cc;
+}
+
+.day ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.day li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* aside menu */
+
+#sidebar{
+    background-color: #0044cc;
+    display: flexbox;
+    /* width: 10rem; */
 }
